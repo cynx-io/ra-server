@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package ra;
+
+option go_package = "ra/api/proto";
+
+message VirtualMachine {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  string status = 4;
+  string type = 5;
+  string resources = 6;
+  int32 user_id = 7;
+  string ip_address = 8;
+  int32 port = 9;
+}

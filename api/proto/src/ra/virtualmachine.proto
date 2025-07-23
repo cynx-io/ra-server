@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "core.proto";
+import "ra/object.proto";
+
+package ra;
+
+option go_package = "ra/api/proto";
+
+service VirtualMachineService {
+  rpc GetVirtualMachine(GetVirtualMachineRequest) returns (VirtualMachineResponse);
+}
+
+message GetVirtualMachineRequest {
+  core.BaseRequest base = 1;
+  int32 id = 2;
+}
+
+message VirtualMachineResponse {
+  core.BaseResponse base = 1;
+  VirtualMachine data = 2;
+}

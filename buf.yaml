@@ -1,0 +1,8 @@
+version: v1beta1
+name: github.com/cynxees/proto-quiz
+build:
+  roots:
+    - api/proto/src
+deps:
+  - buf.build/googleapis/googleapis
+  - buf.build/cynx/cynx-core

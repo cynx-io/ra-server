@@ -1,0 +1,28 @@
+{
+  "app": {
+    "address": "0.0.0.0",
+    "port": 5004,
+    "name": "Ra",
+    "debug": true,
+    "key": "sashimi"
+  },
+  "elastic": {
+    "url": "http://elasticsearch.cynx.buzz/",
+    "level": "debug"
+  },
+  "database": {
+    "host": "devspace",
+    "port": 30306,
+    "database": "db_ra",
+    "username": "cynx",
+    "password": "derwin334",
+    "dialect": "mysql",
+    "autoMigrate": false,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  }
+}
