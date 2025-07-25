@@ -4,10 +4,16 @@ import (
 	"context"
 	"github.com/cynxees/cynx-core/src/logger"
 	"github.com/cynxees/ra-server/internal/app"
+	"github.com/cynxees/ra-server/sandbox/images"
 	"log"
 )
 
 func main() {
+
+	// Switch to QEMU/KVM images instead of LXC due to unprivileged container restrictions
+	images.RunUbuntuContainer()
+	// images.RunJava8Layer()
+	panic("done")
 
 	log.Println("Starting ra")
 	ctx, cancel := context.WithCancel(context.Background())
