@@ -12,7 +12,7 @@ func main() {
 
 	// Switch to QEMU/KVM images instead of LXC due to unprivileged container restrictions
 	images.RunUbuntuContainer()
-	// images.RunJava8Layer()
+	images.RunJava8Container()
 	panic("done")
 
 	log.Println("Starting ra")
